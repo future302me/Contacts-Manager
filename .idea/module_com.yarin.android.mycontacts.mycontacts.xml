@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_com.yarin.android.mycontacts.mycontacts" default="compile.module.com.yarin.android.mycontacts.mycontacts">
+  <dirname property="module.com.yarin.android.mycontacts.mycontacts.basedir" file="${ant.file.module_com.yarin.android.mycontacts.mycontacts}"/>
+  
+  <property name="module.jdk.home.com.yarin.android.mycontacts.mycontacts" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.com.yarin.android.mycontacts.mycontacts" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.com.yarin.android.mycontacts.mycontacts" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.com.yarin.android.mycontacts.mycontacts" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="com.yarin.android.mycontacts.mycontacts.output.dir" value="undefined"/>
+  <property name="com.yarin.android.mycontacts.mycontacts.testoutput.dir" value="undefined"/>
+  
+  <path id="com.yarin.android.mycontacts.mycontacts.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="com.yarin.android.mycontacts.mycontacts.module.production.classpath"/>
+  
+  <path id="com.yarin.android.mycontacts.mycontacts.runtime.production.module.classpath"/>
+  
+  <path id="com.yarin.android.mycontacts.mycontacts.module.classpath"/>
+  
+  <path id="com.yarin.android.mycontacts.mycontacts.runtime.module.classpath"/>
+  
+  
+  <patternset id="excluded.from.module.com.yarin.android.mycontacts.mycontacts">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.com.yarin.android.mycontacts.mycontacts">
+    <patternset refid="excluded.from.module.com.yarin.android.mycontacts.mycontacts"/>
+  </patternset>
+  
+  
+  <target name="compile.module.com.yarin.android.mycontacts.mycontacts" depends="compile.module.com.yarin.android.mycontacts.mycontacts.production,compile.module.com.yarin.android.mycontacts.mycontacts.tests" description="Compile module com.yarin.android.MyContacts.MyContacts"/>
+  
+  <target name="compile.module.com.yarin.android.mycontacts.mycontacts.production" depends="register.custom.compilers" description="Compile module com.yarin.android.MyContacts.MyContacts; production classes"/>
+  
+  <target name="compile.module.com.yarin.android.mycontacts.mycontacts.tests" depends="register.custom.compilers,compile.module.com.yarin.android.mycontacts.mycontacts.production" description="compile module com.yarin.android.MyContacts.MyContacts; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.com.yarin.android.mycontacts.mycontacts" description="cleanup module">
+    <delete dir="${com.yarin.android.mycontacts.mycontacts.output.dir}"/>
+    <delete dir="${com.yarin.android.mycontacts.mycontacts.testoutput.dir}"/>
+  </target>
+</project>

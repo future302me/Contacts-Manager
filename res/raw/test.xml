@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database name="mycontacts.db">
+	<table name="contacts">
+		<contact id="1">
+			<name>you</name>
+			<mobileNumber>15511641486</mobileNumber>
+			<homeNumber>011111</homeNumber>
+			<address>shi jia zhuang</address>
+			<email></email>
+			<blog></blog>
+		</contact>
+	</table>
+</database> 
